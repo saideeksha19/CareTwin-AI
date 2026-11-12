@@ -1,0 +1,26 @@
+{
+  "name": "caretwin-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CareTwin AI - evidence-linked recovery digital twin and care coordination platform",
+  "workspaces": [
+    "apps/web",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @caretwin/web",
+    "build:web": "npm run build --workspace @caretwin/web",
+    "lint:web": "npm run lint --workspace @caretwin/web",
+    "typecheck:web": "npm run typecheck --workspace @caretwin/web",
+    "dev:api": "apps\\api\\.venv\\Scripts\\python.exe -m uvicorn app.main:app --reload --port 8000 --app-dir apps/api",
+    "test:api": "apps\\api\\.venv\\Scripts\\python.exe -m pytest apps/api/tests -q",
+    "test:e2e": "playwright test",
+    "verify:web": "npm run lint --workspace @caretwin/web && npm run typecheck --workspace @caretwin/web && npm run build --workspace @caretwin/web"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0"
+  }
+}

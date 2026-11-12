@@ -1,0 +1,71 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# builds
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# environment and secrets
+.env
+.env.*
+!.env.example
+
+# local databases (any location, including test copies)
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+data/tmp/
+
+# local data and uploaded (synthetic) documents
+data/demo/*.db
+data/demo/*.db-*
+data/demo/*.sqlite
+data/demo/*.sqlite-*
+data/e2e/
+data/documents/
+
+# test and build artifacts
+test-results/
+playwright-report/
+.next/cache/
+
+# logs and OS files
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
+
+# dependencies
+node_modules/
+
+# local AI coding assistant data
+.freebuff/
+
+# temporary root-level screenshots and debug scripts
+/*.png
+/tmp_fix_seed_backfill.py
+
+# coverage
+coverage/
+apps/web/public/images/digital-twin-reference.png
